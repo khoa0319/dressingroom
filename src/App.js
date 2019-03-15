@@ -1,28 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+// Import component
+import Contain from './Model/Contain'
+
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div className="App container-fluid">
+					<h1 className="text-center">phòng thử đồ</h1>
+					<div className="row">
+						{/* Items */}
+						<div className="col-md-8 col-lg-8"></div>
+
+						{/* Model */}
+						<div className="col-md-4 col-lg-4">
+							<Contain />
+						</div>
+					</div>
+				</div>
+		);
+	}
 }
 
 export default App;

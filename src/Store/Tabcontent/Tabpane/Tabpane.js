@@ -29,7 +29,7 @@ class Tabpane extends Component {
 		})
 		return elmItem;
 	}
-	
+
 	render() {
 		let elmItem = [];
 		let tempArr = [];
@@ -39,16 +39,38 @@ class Tabpane extends Component {
 				elmItem = this.getElmItem(tempArr);
 				break;
 			case 'tabBotClothes':
-			tempArr = this.getTypeArray("botclothes");
-			elmItem = this.getElmItem(tempArr);
+				tempArr = this.getTypeArray("botclothes");
+				elmItem = this.getElmItem(tempArr);
 				break;
+			case 'tabShoes':
+				tempArr = this.getTypeArray("shoes");
+				elmItem = this.getElmItem(tempArr);
+				break;
+			case 'tabHandBags':
+				tempArr = this.getTypeArray("handbags");
+				elmItem = this.getElmItem(tempArr);
+				break;
+			case 'tabNecklaces':
+				tempArr = this.getTypeArray("necklaces");
+				elmItem = this.getElmItem(tempArr);
+				break;
+			case 'tabHairStyle':
+				tempArr = this.getTypeArray("hairstyle");
+				elmItem = this.getElmItem(tempArr);
+				break;
+			case 'tabBackground':
+				tempArr = this.getTypeArray("background");
+				elmItem = this.getElmItem(tempArr);
+				break;		
 			default:
 				break;
 		}
 
 		return (
 			<div className="tab-pane face in" id={this.props.buttonItem.tabName}>
-				{elmItem}
+				<div className="row">
+					{elmItem}
+				</div>
 
 			</div>
 		);

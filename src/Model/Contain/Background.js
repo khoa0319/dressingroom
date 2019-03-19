@@ -24,7 +24,7 @@ class Background extends Component {
         }
         return (
             <div>
-                <div id="background" className="background" style={newStyle}></div>;
+                <div id="background" className="background" style={newStyle}></div>
             </div>
         );
     }

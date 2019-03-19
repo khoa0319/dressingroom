@@ -8,7 +8,7 @@ class Button extends Component {
         const styles = {
             // button.btn
             buttonBtnElement: {
-              width: "141px"
+              width: "130px"
             }
           }
           

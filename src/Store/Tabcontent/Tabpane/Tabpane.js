@@ -9,9 +9,14 @@ class Tabpane extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			room: room.ListOfItems
+			room: room.ListOfItems,
+			item: null
 		}
 	}
+
+	// imgSrcTransferTabpane = (item) => {
+	// 	this.setState({item});
+	// }
 
 	getTypeArray = (tabType) => {
 		let tempArr = [];
@@ -25,7 +30,7 @@ class Tabpane extends Component {
 
 	getElmItem = (tempArr) => {
 		let elmItem = tempArr.map((item, index) => {
-			return <Item item={item} key={index} />
+			return <Item item={item} key={index} imgSrcTransferTabpane={this.props.imgSrcTransferTabcontent} />
 		})
 		return elmItem;
 	}

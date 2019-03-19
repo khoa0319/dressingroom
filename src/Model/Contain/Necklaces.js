@@ -43,7 +43,7 @@ class Necklace extends Component {
         }
         return (
             <div>
-                <div className="handbag" style={newStyle}></div>;
+                <div className="handbag" style={newStyle}></div>
             </div>
         );
     }

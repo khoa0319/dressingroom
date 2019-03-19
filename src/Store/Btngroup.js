@@ -17,8 +17,6 @@ class Btngroup extends Component {
   }
   render() {
     $(document).ready(function () {
-      // Tạo màu khởi đầu cho Tab Áo
-      // $("[href='#tabTopClothes']").addClass("btn-primary"); 
 
       $(".btn-pref .btn").click(function () {
         $(".btn-pref .btn").removeClass("btn-primary").addClass("btn-default");
@@ -28,10 +26,8 @@ class Btngroup extends Component {
     });
 
     let elmButton = this.state.buttonArr.map((item, index) => {
-      return (
-        <Button key={index} item={item} />
-      )
-    })
+      return <Button key={index} item={item} />
+    });
     return (
       <div className="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
         {/* <Button/> */}

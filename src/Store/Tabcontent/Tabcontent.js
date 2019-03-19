@@ -12,10 +12,13 @@ class Tabcontent extends Component {
 			ButtonArray
 		}
 	}
-	
+
 	render() {
 		let elmTabpane = this.state.ButtonArray.map((button, index) => {
-			return <Tabpane buttonItem={button} key={index} />
+			return <Tabpane 
+			buttonItem={button} 
+			key={index} 
+			imgSrcTransferTabcontent={this.props.imgSrcTransferStore}/>
 		});
 		return (
 			<div className="tab-content">

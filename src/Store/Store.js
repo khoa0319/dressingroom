@@ -7,7 +7,7 @@ class Store extends Component {
 	render() {
 		return (
 			<div className="store">
-				<Tabcontent />
+				<Tabcontent imgSrcTransferStore={this.props.imgSrcTransferApp} />
 			</div>
 		);
 	}

@@ -16,7 +16,6 @@ class Hairstyle extends Component {
             style: {
                 width: "1000px",
                 height: "1000px",
-                // background: 'url("./images/hairstyle/hairstyle2.png")',
                 position: "absolute",
                 top: "-75%",
                 right: "-57%",
@@ -26,21 +25,7 @@ class Hairstyle extends Component {
         })
     }
 
-    componentWillReceiveProps() {
-        this.changeStyle();
-    }
-
-    render() {
-        const style = {
-            width: "1000px",
-            height: "1000px",
-            background: 'url("./images/hairstyle/hairstyle2.png")',
-            position: "absolute",
-            top: "-75%",
-            right: "-57%",
-            transform: "scale(0.15)",
-            zIndex: "4"
-        }
+    render() {        
         let imgSrc;
         let newStyle = this.state.style;
         if (typeof this.props.item !== "undefined") {
@@ -53,7 +38,7 @@ class Hairstyle extends Component {
         }
         return (
             <div>
-                <div className="hairstyle" style={newStyle}></div>;
+                <div className="hairstyle" style={newStyle}></div>
             </div>
         );
     }
